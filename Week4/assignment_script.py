@@ -62,6 +62,8 @@ with rio.open('data_files/NI_Mosaic.tif') as dataset:
 
 # your code goes here!
 # start by loading the outlines and point data to add to the map
+yCRS = ccrs.UTM(29) # note that this matches with the CRS of our image
+fig, ax = plt.subplots(1, 1, figsize=(10, 10), subplot_kw=dict(projection=myCRS))
 
 
 # next, create the figure and axis objects to add the map to
